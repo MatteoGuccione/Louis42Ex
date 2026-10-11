@@ -1,4 +1,18 @@
+#include <unistd.h>
+
 void	ft_putchar(char c);
+
+void	error(int x, int y)
+{
+	if (x == 0)
+		write(1, "Error! The number you entered for x is 0!\n", 43);
+	if (x < 0)
+		write(1, "Error! The number you entered for x is negative!\n", 49);
+	if (y == 0)
+		write(1, "Error! The number you entered for y is 0!\n", 43);
+	if (y < 0)
+		write(1, "Error! The number you entered for y is negative!\n", 49);
+}
 
 void	print_edge(int j, int cols, int i, int rows)
 {
@@ -39,4 +53,6 @@ void	rush(int cols, int rows)
 			i++;
 		}
 	}
+	else
+		error(cols, rows);
 }
