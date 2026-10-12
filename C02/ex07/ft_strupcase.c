@@ -1,20 +1,29 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/12 16:39:11 by mguccion          #+#    #+#             */
+/*   Updated: 2026/10/12 16:39:13 by mguccion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strupcase(char *str)
+char	*ft_strupcase(char *str)
 {
-	int i;
-	char c;
+	int		i;
+	char	c;
 
 	i = 0;
-	while (str[i]!='\0')
+	while (str[i] != '\0')
 	{
-		if(str[i] > 'a' && str[i] < 'z')
+		if (str[i] > 'a' && str[i] < 'z')
 		{
 			c = str[i] - 32;
 			str[i] = c;
 		}
 		i++;
 	}
-	write(1,str,i);
-	return str;
+	return (str);
 }
