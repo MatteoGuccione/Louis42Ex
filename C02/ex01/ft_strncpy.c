@@ -13,10 +13,8 @@
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
-	char			filler_char[n];
 
 	i = 0;
-	dest = filler_char;
 	while (i < n && src[i] != '\0')
 	{
 		dest[i] = src[i];
