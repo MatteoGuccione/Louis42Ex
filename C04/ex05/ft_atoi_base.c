@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/14 10:37:56 by mguccion          #+#    #+#             */
+/*   Updated: 2026/10/14 10:37:58 by mguccion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 int	ft_check_base(char *base)
 {
 	int	i;
@@ -36,12 +47,28 @@ int	ft_get_digit(char c, char *base)
 	return (-1);
 }
 
+int	ft_get_result(char *str, char *base, int base_len, int index)
+{
+	int	result;
+	int	i;
+	int	digit;
+
+	i = index;
+	digit = ft_get_digit(str[i], base);
+	while (digit >= 0)
+	{
+		result = result * base_len + digit;
+		i++;
+		digit = ft_get_digit(str[i], base);
+	}
+	return (result);
+}
+
 int	ft_atoi_base(char *str, char *base)
 {
 	int	i;
 	int	sign;
 	int	result;
-	int	digit;
 	int	base_len;
 
 	if (!ft_check_base(base))
@@ -60,12 +87,14 @@ int	ft_atoi_base(char *str, char *base)
 			sign = -sign;
 		i++;
 	}
-	digit = ft_get_digit(str[i], base);
-	while (digit >= 0)
-	{
-		result = result * base_len + digit;
-		i++;
-		digit = ft_get_digit(str[i], base);
-	}
+	result = ft_get_result(str, base, base_len, i);
 	return (result * sign);
 }
+
+// int main()
+// {
+// 	int res;
+
+// 	res = ft_atoi_base(" ---+--+1234ab567", "0123456789");
+// 	printf("%d",res);
+// }

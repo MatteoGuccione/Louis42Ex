@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/14 10:37:48 by mguccion          #+#    #+#             */
+/*   Updated: 2026/10/14 10:37:50 by mguccion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putnbr_base(long nbr, char *base);
@@ -35,7 +47,7 @@ void	ft_print_base(long nbr, char *base, int len)
 	write(1, &c, 1);
 }
 
-void	ft_putnbr_base(int nbr, char *base) //Main function
+void	ft_putnbr_base(int nbr, char *base)
 {
 	long	nb;
 	int		len;
