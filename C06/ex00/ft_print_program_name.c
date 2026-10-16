@@ -3,7 +3,7 @@
 int main(int n, char **args)
 {
 	int i;
-	char c;	
+	char c;
 
 	if(n == 0)
 		return (0);
@@ -13,5 +13,6 @@ int main(int n, char **args)
 		c = args[0][i];
 		write(1, &c, 1);
 		i++;
-	}
+	}	
+	write(1, "\n", 1);
 }

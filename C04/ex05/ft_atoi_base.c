@@ -54,6 +54,7 @@ int	ft_get_result(char *str, char *base, int base_len, int index)
 	int	digit;
 
 	i = index;
+	result = 0;
 	digit = ft_get_digit(str[i], base);
 	while (digit >= 0)
 	{

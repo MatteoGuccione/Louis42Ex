@@ -5,7 +5,9 @@ int	ft_iterative_factorial(int nb)
 	int	i;
 	int	res;
 
-	if (!nb || nb == 0)
+	if (nb == 0)
+		return (1);
+	if (nb < 0)
 		return (0);
 	res = 1;
 	i = nb;
@@ -22,9 +24,9 @@ int	ft_iterative_factorial(int nb)
 		return (res);
 }
 
-int main()
-{
-	int resu;
-	resu = ft_iterative_factorial(6);
-	printf("%d", resu);
-}
+// int main()
+// {
+// 	int resu;
+// 	resu = ft_iterative_factorial(6);
+// 	printf("%d", resu);
+// }

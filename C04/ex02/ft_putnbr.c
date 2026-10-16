@@ -15,13 +15,22 @@
 void	ft_putnbr(int nb)
 {
 	char	digits[10];
+	long	n;
 	int		i;
 
 	i = 0;
-	while (nb > 0)
+	n = nb;
+	if(n == 0)
+		write(1, "0", 1);
+	if(n < 0)
 	{
-		digits[i] = nb % 10 + '0';
-		nb = nb / 10;
+		write(1, "-", 1);
+		n = -n;
+	}
+	while (n > 0)
+	{
+		digits[i] = n % 10 + '0';
+		n = n / 10;
 		i++;
 	}
 	while (i > 0)

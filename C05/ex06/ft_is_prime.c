@@ -1,4 +1,4 @@
-#include <stdio.h>
+// #include <stdio.h>
 
 int ft_is_prime(int nb)
 {
@@ -16,9 +16,9 @@ int ft_is_prime(int nb)
 	return (1);
 }
 
-int main()
-{
-	int res;
-	res = ft_is_prime(5);
-	printf("%d", res);
-}
+// int main()
+// {
+// 	int res;
+// 	res = ft_is_prime(5);
+// 	printf("%d", res);
+// }

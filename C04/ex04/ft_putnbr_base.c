@@ -12,8 +12,6 @@
 
 #include <unistd.h>
 
-void	ft_putnbr_base(long nbr, char *base);
-
 int	ft_check_base(char *base)
 {
 	int	i;

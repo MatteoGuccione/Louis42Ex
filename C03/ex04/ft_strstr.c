@@ -1,30 +1,19 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/14 10:15:01 by mguccion          #+#    #+#             */
-/*   Updated: 2026/10/14 10:15:04 by mguccion         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strstr(char *str, char *to_find)
 {
-	unsigned int	i;
-	unsigned int	j;
+	int	i;
+	int	j;
 
+	if (to_find[0] == '\0')
+		return (str);
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j < nb)
+	while (str[i] != '\0')
 	{
-		dest[i] = src[j];
+		j = 0;
+		while (str[i + j] == to_find[j] && to_find[j] != '\0')
+			j++;
+		if (to_find[j] == '\0')
+			return (&str[i]);
 		i++;
-		j++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }

@@ -1,4 +1,4 @@
-#include <stdio.h>
+// #include <stdio.h>
 
 int ft_iterative_power(int nb, int power)
 {
@@ -15,7 +15,7 @@ int ft_iterative_power(int nb, int power)
 		res = -res;
 	while (i < power)
 	{
-		res = res * res;
+		res = res * nb;
 		i++;
 	}
 	if((nb < 0 && i%2 != 0))
@@ -23,9 +23,9 @@ int ft_iterative_power(int nb, int power)
 	return (res);
 }
 
-int main()
-{
-	int resu;
-	resu = ft_iterative_power(-2,2);
-	printf("%d", resu);
-}
+// int main()
+// {
+// 	int resu;
+// 	resu = ft_iterative_power(-2,2);
+// 	printf("%d", resu);
+// }
