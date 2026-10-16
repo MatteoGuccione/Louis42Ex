@@ -1,10 +1,9 @@
 #include <unistd.h>
 
-int main(int n, char **args)
+int	main(int n, char **args)
 {
 	int		i;
 	int		j;
-	char	c;
 
 	i = 1;
 	while (i < n)
@@ -12,13 +11,11 @@ int main(int n, char **args)
 		j = 0;
 		while (args[i][j] != '\0')
 		{
-			c = args[i][j];
-			write(1, &c, 1);
+			write(1, &args[i][j], 1);
 			j++;
 		}
 		write(1, "\n", 1);
 		i++;
 	}
-
 	return (0);
 }

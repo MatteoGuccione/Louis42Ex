@@ -20,9 +20,9 @@ void	ft_putnbr(int nb)
 
 	i = 0;
 	n = nb;
-	if(n == 0)
+	if (n == 0)
 		write(1, "0", 1);
-	if(n < 0)
+	if (n < 0)
 	{
 		write(1, "-", 1);
 		n = -n;
