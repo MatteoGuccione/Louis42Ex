@@ -9,28 +9,32 @@
 /*   Updated: 2026/10/12 16:41:45 by mguccion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 char	*ft_strcapitalize(char *str)
 {
-	int		i;
-	char	c;
+	int	i;
+	int	new_word;
 
 	i = 0;
+	new_word = 1;
 	while (str[i] != '\0')
 	{
-		if (i != 0 && str[i - 1] == ' ' && (str[i] > 'a' && str[i] < 'z'))
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			c = str[i] - 32;
-			str[i] = c;
+			if (new_word)
+				str[i] -= 32;
 		}
+		else if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			if (!new_word)
+				str[i] += 32;
+		}
+		if ((str[i] >= 'a' && str[i] <= 'z')
+			|| (str[i] >= 'A' && str[i] <= 'Z')
+			|| (str[i] >= '0' && str[i] <= '9'))
+			new_word = 0;
+		else
+			new_word = 1;
 		i++;
 	}
 	return (str);
 }
-
-// int main()
-// {
-// 	char str[] = "3iao the world Io";
-// 	ft_strcapitalize(str);
-//	write(1,str,i);
-// }

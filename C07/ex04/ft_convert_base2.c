@@ -1,41 +1,16 @@
-int ft_get_lenght(char* str)
+#include <stdlib.h>
+
+int	get_base_len(char *base)
 {
-	int lenght;
-
-	lenght = 0;
-	while(str[lenght])
-		lenght++;
-	return (lenght);
-}
-
-int ft_get_sing(char* str)
-{
-	int sign;
-	int index;
-
-	sign = 1;
-	index = 0;
-	while(str[index])
-	{
-		if(str[index] == '-')
-			sign = -sign;
-		index++;
-	}
-	return (sign);
-}
-
-int ft_check_base(char *base)
-{
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
-	while(base[i])
+	while (base[i])
 	{
-		if(base[i] == '-' || base[i] == '+' || base[i] == ' ' || (base[i] >= 9 && base[i] <= 13))
-		{
+		if (base[i] == '+' || base[i] == '-'
+			|| base[i] == ' ' || (base[i] >= 9 && base[i] <= 13))
 			return (0);
-		}
 		j = i + 1;
 		while (base[j])
 		{
@@ -45,34 +20,89 @@ int ft_check_base(char *base)
 		}
 		i++;
 	}
-	return (i >= 2);
+	if (i < 2)
+		return (0);
+	return (i);
 }
 
-int ft_convert_string_to_int(char *nbr)
+int	get_digit(char c, char *base)
 {
-	int number;
-	int index;
+	int	i;
 
-	index = 0;
-	number = 0;
-	while(nbr[i])
+	i = 0;
+	while (base[i])
 	{
-		number += (nbr - '0');
-		index++;
+		if (base[i] == c)
+			return (i);
+		i++;
 	}
-	return (number)
+	return (-1);
 }
 
-int ft_convert_int(int n, char *base_from, char *base_to)
+int	ft_atoi_base(char *nbr, char *base)
 {
-	int base_to_length;
-	int index;
+	int			i;
+	int			sign;
+	int			digit;
+	long long	result;
+	int			base_len;
 
-	base_to_length = ft_get_lenght(base_to);
-	n = n % base_to_length;
-	index = 0;
-	while(base_to[index])
+	base_len = get_base_len(base);
+	if (base_len == 0)
+		return (0);
+	i = 0;
+	while (nbr[i] == ' ' || (nbr[i] >= 9 && nbr[i] <= 13))
+		i++;
+	sign = 1;
+	while (nbr[i] == '+' || nbr[i] == '-')
 	{
-		if()
+		if (nbr[i] == '-')
+			sign = -sign;
+		i++;
 	}
+	result = 0;
+	digit = get_digit(nbr[i], base);
+	while (digit >= 0)
+	{
+		result = result * base_len + digit;
+		i++;
+		digit = get_digit(nbr[i], base);
+	}
+	return ((int)(result * sign));
+}
+
+char	*ft_itoa_base(int nbr, char *base)
+{
+	char			buffer[35];
+	char			*result;
+	unsigned int	n;
+	int				base_len;
+	int				i;
+	int				negative;
+
+	base_len = get_base_len(base);
+	if (base_len == 0)
+		return (NULL);
+	negative = (nbr < 0);
+	if (negative)
+		n = (unsigned int)(-(long long)nbr);
+	else
+		n = (unsigned int)nbr;
+	i = 0;
+	while (n >= (unsigned int)base_len)
+	{
+		buffer[i++] = base[n % base_len];
+		n /= base_len;
+	}
+	buffer[i++] = base[n];
+	if (negative)
+		buffer[i++] = '-';
+	result = malloc(i + 1);
+	if (result == NULL)
+		return (NULL);
+	result[i] = '\0';
+	n = 0;
+	while (i > 0)
+		result[n++] = buffer[--i];
+	return (result);
 }

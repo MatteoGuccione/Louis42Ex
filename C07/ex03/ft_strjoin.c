@@ -53,16 +53,16 @@ char *ft_strjoin(int size, char **strs, char *sep)
 	return final_str;
 }
 
-int main()
-{
-	char *strs[] = {"Ciao", "Mondo", "42"};
-    char *sep = ", ";
-    char *result;
+// int main()
+// {
+// 	char *strs[] = {"Ciao", "Mondo", "42"};
+//     char *sep = ", ";
+//     char *result;
 
-    result = ft_strjoin(3, strs, sep);
-    if (result == NULL)
-        return (1);
-    printf("%s\n", result);
-    free(result);
-    return (0);
-}
+//     result = ft_strjoin(3, strs, sep);
+//     if (result == NULL)
+//         return (1);
+//     printf("%s\n", result);
+//     free(result);
+//     return (0);
+// }

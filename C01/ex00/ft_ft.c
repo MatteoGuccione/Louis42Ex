@@ -6,9 +6,9 @@ void ft_ft(int *nbr)
     printf("%d",*nbr);
 }
 
-int main(void)
-{
-    int number = 2;
-    int *n = &number;
-    ft_ft(n);
-}
+// int main(void)
+// {
+//     int number = 2;
+//     int *n = &number;
+//     ft_ft(n);
+// }

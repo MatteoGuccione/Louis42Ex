@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-char	*ft_strupcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int		i;
 	char	c;
@@ -20,7 +20,7 @@ char	*ft_strupcase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] > 'A' && str[i] < 'Z')
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
 			c = str[i] + 32;
 			str[i] = c;

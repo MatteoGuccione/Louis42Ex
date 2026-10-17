@@ -1,16 +1,16 @@
-int ft_get_lenght(char* str);
+int	get_base_len(char *base);
 
-char *ft_convert_base(char *nbr, char *base_from, char *base_to)
+int	ft_atoi_base(char *nbr, char *base);
+
+char	*ft_itoa_base(int nbr, char *base);
+
+char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
-	int nbr_lenght;
+	int	number;
 
-	nbr_lenght = ft_get_lenght(nbr)
-	if(nbr > 10)
-		return 0;
-	
-	//Check parameters
-
-	//Check base
-
-	//Conversione
+	if (get_base_len(base_from) == 0
+		|| get_base_len(base_to) == 0)
+		return (NULL);
+	number = ft_atoi_base(nbr, base_from);
+	return (ft_itoa_base(number, base_to));
 }
