@@ -28,8 +28,7 @@ char	*ft_strcapitalize(char *str)
 			if (!new_word)
 				str[i] += 32;
 		}
-		if ((str[i] >= 'a' && str[i] <= 'z')
-			|| (str[i] >= 'A' && str[i] <= 'Z')
+		if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')
 			|| (str[i] >= '0' && str[i] <= '9'))
 			new_word = 0;
 		else
