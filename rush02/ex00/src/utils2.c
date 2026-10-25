@@ -52,3 +52,26 @@ char	***dict_to_array(char *str)
 	ft_free_words(rows);
 	return (array);
 }
+
+int	ft_parse_row(char ***array, char *row, int index)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (row[i] && row[i] != ':')
+		i++;
+	if (!row[i])
+		return (0);
+	array[index][0] = ft_strdup_range(row, 0, i);
+	if (!array[index][0])
+		return (0);
+	i++;
+	while (row[i] == ' ')
+		i++;
+	j = ft_strlen(row + i);
+	array[index][1] = ft_strdup(row + i);
+	if (!array[index][1])
+		return (free(array[index][0]), 0);
+	return (1);
+}

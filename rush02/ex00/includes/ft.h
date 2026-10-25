@@ -12,6 +12,8 @@ void	ft_free_words(char **words);
 void	ft_free_dict(char ***dict);
 void	ft_trim_inplace(char *str);
 void	ft_print_array(char ***array);
+char	*ft_strdup_range(char *str, int start, int len);
+int		ft_parse_row(char ***array, char *row, int index);
 void	ft_print_digit(int nb, char ***dict);
 int		ft_match_print(char c, char **entry, int index);
 void	ft_print_entry(char *value, int index);

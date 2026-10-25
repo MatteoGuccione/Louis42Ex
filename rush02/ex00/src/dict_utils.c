@@ -47,3 +47,21 @@ void	ft_trim_inplace(char *str)
 		str[i++] = str[start++];
 	str[i] = '\0';
 }
+
+char	*ft_strdup_range(char *str, int start, int len)
+{
+	char	*dest;
+	int		i;
+
+	dest = malloc(sizeof(char) * (len + 1));
+	if (!dest)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		dest[i] = str[start + i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
