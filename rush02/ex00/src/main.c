@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 		reference = ft_load_dict("./numbers.dict");
 		dict = ft_load_dict(argv[1]);
 		if (!reference || !dict
-		|| !ft_check_required_keys(reference, dict))
+			|| !ft_check_required_keys(reference, dict))
 			return (write(2, "Dict Error\n", 11), 1);
 		ft_read_from_left(argv[2], dict);
 	}

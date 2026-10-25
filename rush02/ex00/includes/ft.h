@@ -7,7 +7,15 @@
 # include <stdio.h>
 
 char	*ft_trim_spaces(char *str);
+char	***dict_to_array(char *str);
+void	ft_free_words(char **words);
+void	ft_free_dict(char ***dict);
+void	ft_trim_inplace(char *str);
+void	ft_print_array(char ***array);
 void	ft_print_digit(int nb, char ***dict);
+int		ft_match_print(char c, char **entry, int index);
+void	ft_print_entry(char *value, int index);
+void	ft_print_scale(char *str, char ***dict);
 int		ft_strlen(char *str);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 int		ft_is_separator(char *str, char *sep);
