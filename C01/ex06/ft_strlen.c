@@ -1,21 +1,23 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/21 09:49:23 by mguccion          #+#    #+#             */
+/*   Updated: 2026/10/21 09:49:24 by mguccion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int loopValue;
-    loopValue = 0;
-    while(str[loopValue] != '\0')
-    {
-        loopValue++;
-    }
-    return loopValue;
-}
+	int	loop_value;
 
-int main(void)
-{
-    int strLen;
-    strLen = ft_strlen("Hellowwwwww");
-    printf("%d",strLen);
-    return 0;
+	loop_value = 0;
+	while (str[loop_value] != '\0')
+	{
+		loop_value++;
+	}
+	return (loop_value);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/26 14:20:56 by mguccion          #+#    #+#             */
+/*   Updated: 2026/10/26 14:20:57 by mguccion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_BOOLEAN_H
 # define FT_BOOLEAN_H
 
@@ -15,8 +27,8 @@
 
 typedef int	t_bool;
 
+void	ft_putstr(char *str);
+
+t_bool	ft_is_even(int nbr);
+
 #endif
-
-void ft_putstr(char *str);
-
-t_bool ft_is_even(int nbr);

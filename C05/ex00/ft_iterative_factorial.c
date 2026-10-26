@@ -1,4 +1,14 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/21 10:19:37 by mguccion          #+#    #+#             */
+/*   Updated: 2026/10/21 10:19:38 by mguccion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_iterative_factorial(int nb)
 {
@@ -23,10 +33,3 @@ int	ft_iterative_factorial(int nb)
 	else
 		return (res);
 }
-
-// int main()
-// {
-// 	int resu;
-// 	resu = ft_iterative_factorial(6);
-// 	printf("%d", resu);
-// }

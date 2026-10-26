@@ -9,9 +9,6 @@
 /*   Updated: 2026/10/12 16:33:30 by mguccion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
@@ -27,14 +24,3 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
-
-// int main()
-// {
-// 	int result;
-// 	char res;
-
-// 	result = ft_str_is_alpha("123");
-// 	res = result + '0';
-// 	write(1, &res, 1);
-// 	return (2);
-// }

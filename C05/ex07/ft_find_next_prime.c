@@ -1,4 +1,15 @@
-// #include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/21 10:20:15 by mguccion          #+#    #+#             */
+/*   Updated: 2026/10/21 10:20:16 by mguccion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_find_next_prime(int nb)
 {
 	int	i;
@@ -20,10 +31,3 @@ int	ft_find_next_prime(int nb)
 	}
 	return (next_number);
 }
-
-// int main()
-// {
-// 	int res;
-// 	res = ft_find_next_prime(21);
-// 	printf("%d", res);
-// }

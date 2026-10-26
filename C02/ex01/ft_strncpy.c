@@ -27,11 +27,3 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-
-// int main()
-// {
-// 	char *src = "Hello";
-// 	char dest[2];
-
-// 	ft_strncpy(dest,src,6);
-// }

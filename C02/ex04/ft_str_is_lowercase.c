@@ -25,14 +25,3 @@ int	ft_str_is_lowercase(char *str)
 	}
 	return (1);
 }
-
-// int main()
-// {
-// 	int result;
-// 	char res;
-
-// 	result = ft_str_is_lowercase("aaa");
-// 	res = result + '0';
-// 	write(1, &res, 1);
-// 	return (2);
-// }

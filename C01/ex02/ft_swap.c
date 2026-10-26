@@ -1,20 +1,20 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/21 09:48:37 by mguccion          #+#    #+#             */
+/*   Updated: 2026/10/21 09:48:38 by mguccion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-    int swapVar = *a;
-    *a = *b;
-    b = &swapVar;
-    printf("a = %d      ",*a);
-    printf("b = %d",*b);
-}
+	int	swap_var;
 
-// int main(void)
-// {
-//     int numberA = 2;
-//     int *ptr_A = &numberA;
-//     int numberB = 4;
-//     int *ptr_B = &numberB;
-//     ft_swap(ptr_A,ptr_B);
-//     return 0;
-// }
+	swap_var = *a;
+	*a = *b;
+	*b = swap_var;
+}

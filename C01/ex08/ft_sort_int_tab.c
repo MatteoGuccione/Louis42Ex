@@ -1,38 +1,34 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/21 09:49:36 by mguccion          #+#    #+#             */
+/*   Updated: 2026/10/21 09:49:37 by mguccion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_sort_int_tab(int *tab, int size)
+void	ft_sort_int_tab(int *tab, int size)
 {
-    int i;
-    i=0;
-    while(i<size-1)
-    {
-        if(tab[i] > tab[i+1]) 
-        {
-            int tempVar;
-            tempVar = tab[i];
-            tab[i] = tab[i+1]; 
-            tab[i+1] = tempVar; 
-            i=0;
-        }
-        else
-        {
-            i++;
-        }
-    }
-    int loopValue;
-    loopValue = 0;
-    while(loopValue<size)
-    {
-        printf("%d",tab[loopValue]);
-        printf("\n");
-        loopValue++;
-    }
-}
+	int	i;
+	int	temp_var;
 
-int main(void)
-{
-    int values[5] = {6,3,4,2,8};
-    int *tab = values;
-    ft_sort_int_tab(tab, 5);
-    return 0;
+	temp_var = 0;
+	i = 0;
+	while (i < size - 1)
+	{
+		if (tab[i] > tab[i + 1])
+		{
+			temp_var = tab[i];
+			tab[i] = tab[i + 1];
+			tab[i + 1] = temp_var;
+			i = 0;
+		}
+		else
+		{
+			i++;
+		}
+	}
 }

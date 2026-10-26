@@ -1,25 +1,22 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mguccion <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/21 09:48:43 by mguccion          #+#    #+#             */
+/*   Updated: 2026/10/21 09:48:47 by mguccion         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-    int divValue;
-    divValue = a/b;
-    int modValue;
-    modValue = a%b;
-    div = &divValue;
-    mod = &modValue;
-    printf("div = %d",*div);
-    printf("\n");
-    printf("mod = %d",*mod);
-    printf("\n");
-}
+	int	div_value;
+	int	mod_value;
 
-int main(void)
-{
-    int divValue = 2;
-    int *ptr_Div = &divValue;
-    int modValue = 4;
-    int *ptr_Mod = &modValue;
-    ft_div_mod(5,2,ptr_Div,ptr_Mod);
-    return 0;
+	div_value = a / b;
+	mod_value = a % b;
+	*div = div_value;
+	*mod = mod_value;
 }
